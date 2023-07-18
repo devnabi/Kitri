@@ -1,5 +1,5 @@
 # ***Kitri💻🪄***
-**"Study Records at Kitri by Devnabi!" 🦋**
+**"Documenting studying at Kitri!" 🦋**
 
 > 정보보안 전문가 양성 - 보안개발 6기(JAVA 벡엔드 웹개발 과정)
 
