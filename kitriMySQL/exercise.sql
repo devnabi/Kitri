@@ -48,3 +48,18 @@ SELECT * FROM products;
 SELECT * FROM suppliers;
 SELECT * FROM shippers;
 
+SELECT S.supplierName, P.unit FROM products AS P
+JOIN suppliers AS S
+ON P.supplierID = S.supplierID;
+
+-- 프로그래머스 SQL 이상한 문제 확인 --
+SELECT DATEDIFF('2022-10-28', '2022-09-29') + 1 AS DATE;
+
+-- Self JOIN 잘 몰라서 혼자 결과를 생각해보고 예시쿼리를 복사해서 결과 확인 --
+-- 예상 적중! >< --
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City 
+ORDER BY A.City;
+
