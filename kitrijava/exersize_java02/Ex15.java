@@ -34,7 +34,7 @@ public class Ex15 {
                 return;
             }
             if(num < randomNum){
-                System.out.println("입력하신 숫자는 정해진 숫자보다 작습니디.");
+                System.out.println("입력하신 숫자는 정해진 숫자보다 작습니다.");
             }
             if(num > randomNum){
                 System.out.println("입력하신 숫자는 정해진 숫자보다 큽니다.");
