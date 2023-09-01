@@ -62,7 +62,6 @@
 
         // 10턴을 초과하면 실패 메시지를 띄어주기 "!!!GAME OVER!!!" >> 빨강색 배경
 
-        
         // 추측이 틀렸으면 빨강색으로 표시, 맞히면 초록색으로 표시
 
         // 초록색 표시와 함께 버튼을 비활성화
@@ -89,7 +88,7 @@
 
         function guessNum(){
 
-            while (turn++ <= 10) {
+            if (turn++ <= 10) {
                 guessList(number.value);
 
                 // 정답인지 아닌지
@@ -102,18 +101,14 @@
                     lastResult.style.background = "green";
                     newGame();
                     disabled();
-                    turn = 0;
-                    arr = [];
                     return;
                 }
 
                 // 숫자 추측이 어떤지
                 if (number.value > randomNum) {
                     lowOrHi.innerText = "Last guess was too high!";
-                    break;
                 } else if (number.value < randomNum) {
                     lowOrHi.innerText = "Last guess was too low!";
-                    break;
                 }
             } // while의 끝
 
@@ -129,6 +124,10 @@
         // 새로운 추측을 할 때마다 배열에 저장하기
         let arr = [];
         function guessList(num){
+            // 기본 값이 0이 되도록
+            if(num == ""){
+                num = 0;
+            }
             arr.push(num);
             return guesses.innerHTML = `Previous guesses: ${arr.join(" ")}`;
         }
@@ -138,8 +137,6 @@
         function gameOver(){
             lastResult.innerText = "!!!GAME OVER!!!";
             lastResult.style.background = "red";
-            turn = 0;
-            arr = [];
         }
 
 
@@ -154,11 +151,16 @@
         function newGame(){
             lowOrHi.innerHTML = `<input type="button" value="start new game">`;
         }
+        
 
         // 새로운 게임 이벤트
         lowOrHi.addEventListener('click', (event) => {
             if (event.target.type == 'button') {
                 // 초기화
+                randomNum = Math.floor(Math.random() * 100) + 1;
+                turn = 0;
+                arr = [];
+
                 number.value = null;
                 number.disabled = false;
 
@@ -167,7 +169,10 @@
                 lastResult.style.display = 'none';
                 lowOrHi.innerHTML = "";
 
+                // 버튼 활성화
                 submit.disabled = false;
+
+                // 빠른 방법
                 // location.reload();
             }
         });
