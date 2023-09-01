@@ -7,7 +7,7 @@
 
 /*내가 생각한 것 :
 입력값이 더 작거나 크면 각각 메시지 띄어주기
-몇을 썼는지 누적해서 보여주기 Previous guesses: 7 10 20 15 ...
+몇을 썼는지 누적해서 보여주기 Previous guesses: 50 60 57 ...
 틀리면 "Wrong!" / 맞으면 "Congratulations! You got it right!"
 작으면 "Last guess was too low!" / 크면 "Last guess was too high!
 10턴을 초과하면 실패 메시지를 띄어주기 "!!!GAME OVER!!!" >> 빨강색 배경
@@ -58,7 +58,7 @@ function guessNum(){
     } else if (number.value < randomNum) {
         lowOrHi.innerText = "Last guess was too low!";
     }
-} // while의 끝
+} // if의 끝
 
     if(turn > 10){
         gameOver();
