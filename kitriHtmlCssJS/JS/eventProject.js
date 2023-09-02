@@ -52,12 +52,12 @@ function guessNum(){
             return;
         }
 
-    // 숫자 추측이 어떤지
-    if (number.value > randomNum) {
-        lowOrHi.innerText = "Last guess was too high!";
-    } else if (number.value < randomNum) {
-        lowOrHi.innerText = "Last guess was too low!";
-    }
+        // 숫자 추측이 어떤지
+        if (number.value > randomNum) {
+            lowOrHi.innerText = "Last guess was too high!";
+        } else {
+            lowOrHi.innerText = "Last guess was too low!";
+        }
 } // if의 끝
 
     if(turn > 10){
