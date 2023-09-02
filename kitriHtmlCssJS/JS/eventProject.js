@@ -68,20 +68,18 @@ function guessNum(){
 }
             
 
-// 입력값을 보여주기
-// 새로운 추측을 할 때마다 배열에 저장하기
+// 입력한 값을 보여주기 / 새로운 추측을 할 때마다 배열에 저장하기
 let arr = [];
 function guessList(num){
-// 기본 값이 0이 되도록
 if(num == ""){
     num = 0;
-}
+} // 기본 값이 0이 되도록
 arr.push(num);
 guesses.innerHTML = `Previous guesses: ${arr.join(" ")}`;
 }
 
 
-// 기회 10번을 초과하거나 게임을 성공해서 끝났다면
+// 기회 10번을 초과했다면 실패
 function gameOver(){
     lastResult.innerText = "!!!GAME OVER!!!";
     lastResult.style.background = "red";
@@ -110,15 +108,16 @@ lowOrHi.addEventListener('click', (event) => {
         arr = [];
 
         number.value = null;
-        number.disabled = false;
 
         guesses.innerHTML = "";
         lastResult.innerHTML = "";
         lastResult.style.display = 'none';
         lowOrHi.innerHTML = "";
 
-        // 버튼 활성화
+        // 입력, 버튼 활성화
+        number.disabled = false;
         submit.disabled = false;
+
 
         // 빠른 방법
         // location.reload();
