@@ -30,7 +30,7 @@ let lowOrHi = document.querySelector(".lowOrHi"); // 정답이 큰 숫자인지 
 lastResult.classList.add("style");
 
 // submit을 클릭했을 때 이벤트 발생
-submit.addEventListener( "click", (event) => { guessNum() } ); // 이벤트
+submit.addEventListener( 'click', (event) => { guessNum() } ); // 이벤트
 
 let turn = 0;
 
