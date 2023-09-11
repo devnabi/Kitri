@@ -1,0 +1,75 @@
+/*MDN css gradient 복사*/
+body{
+    background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(0, 0, 255, 0.5),
+      rgba(0, 0, 255, 0) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(0, 255, 0, 0.5),
+        rgba(0, 255, 0, 0) 70.71%
+      ) beige;
+  border-radius: 50%;
+}
+
+article{
+    width: 40%;
+    min-height: 100dvh;
+    background-color: #00000050;
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: "Sofia", sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.container > button{
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 25px
+}
+
+.container > button:hover{
+    background: -webkit-linear-gradient(45deg, white, black);
+    border-color: white;
+    box-shadow: 0 0.5em 0.5rem -0.4em white;
+    transform: translateY(-0.25em);
+    transition: 0.7s;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+li > button{
+    margin-left: 92%;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+li > button:hover{
+    background-color: black;
+}
